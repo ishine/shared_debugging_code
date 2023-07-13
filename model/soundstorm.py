@@ -144,7 +144,7 @@ class SoundStorm(nn.Module):
             top_k=10,
             average="micro",
             multidim_average="global",
-            ignore_index=positionwise_conv_kernel_size - 1,  # ignore padding
+            ignore_index=acoustic_codebook_size - 1,  # ignore padding
         )
 
         # project the dimension of semantic tokens to model dimension
